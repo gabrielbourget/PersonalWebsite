@@ -1,0 +1,17 @@
+@import "../../../GlobalStyles/colors.css";
+
+.cradle {
+	display: grid;
+	grid-column: 2 / -2;
+	justify-items: center;
+	align-items: center;
+	height: 100%;
+}
+
+.darkTheme {
+	background: var(--veryveryDarkGrey);
+}
+
+.lightTheme {
+	background: var(--white);
+}

@@ -1,0 +1,18 @@
+@import "../../../GlobalStyles/colors.css";
+
+.cradle {
+	height: 100%;
+	width: 100%;
+	overflow: auto;
+	display: grid;
+	grid-template-columns: 1fr 6fr 1fr;
+	grid-template-rows: 1fr;
+}
+
+.darkTheme {
+	background: var(--veryveryDarkGrey);
+}
+
+.lightTheme {
+	background: var(--white);
+}

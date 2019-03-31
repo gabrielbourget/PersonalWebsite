@@ -1,0 +1,81 @@
+@import '../../../../GlobalStyles/colors.css';
+
+.treeNode {
+  display: grid;
+  align-items: center;
+  justify-content: left;
+  grid-gap: 1rem;
+  grid-auto-flow: column;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: 5px 8px;
+	// - Left padding determined at run time by the component, 
+	//   based on nesting level within the tree structure.
+	&:hover {
+		&.darkTheme {
+			background: var(--veryDarkGrey);
+		}
+		&.lightTheme {
+			background: var(--lightGrey);
+		}
+	}
+
+	&.darkTheme {
+		& a {
+			color: var(--white);
+
+			&:visited, &:hover, &:focus {
+				color: var(--white);
+				text-decoration: none;
+			}
+		}
+	}
+
+	&.lightTheme {
+		& a {
+			color: var(--black);
+
+			&:visited, &:hover, &:focus {
+				color: var(--black);
+				text-decoration: none;
+			}
+		}
+	}	
+}
+
+.nodeIcon {
+	font: {
+		family: var(--sansSerifStack);
+		//size: 1.2rem;
+		// padding: 0 5px;
+		// - Margin right determined at run time by the component. 
+	}
+}
+
+.darkTheme {
+	color: var(--white);
+}
+
+.lightTheme {
+	color: var(--black);
+}
+
+.nodeSpan {
+	&:hover, &:active { 
+		cursor: pointer; 
+		color: var(--covenantPurple);
+	}
+	width: 100%;
+
+	font-family: var(--sansSerifStack);
+	font-size: 1.3rem;
+	font-weight: bold;
+	// &.isOpen {
+	// 	border: 1.5px solid var(--covenantPurple);
+	// }
+}
+
+
+
+
+
