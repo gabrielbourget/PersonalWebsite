@@ -45,7 +45,7 @@
 				background: var(--veryveryDarkGrey);
 				border-radius: 5px;
 				&:hover { 
-					background: var(--black);
+					background: var(--veryveryDarkGrey);
 					box-shadow: var(--boxShadowDarkTheme); 
 				}
 		}
@@ -104,6 +104,14 @@
 			text-decoration: none;
 		}		
 	}
+}
+
+.connectionLinkGrid {
+	padding-top: 10px;
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: 1.5rem;
+	justify-items: center;
 }
 
 

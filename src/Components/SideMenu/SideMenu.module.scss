@@ -99,11 +99,10 @@
 }
 
 .buttonGrid {
-	margin: 15px;
 	display: grid;
 	justify-content: start;
+	padding: 10px 0px;
 	grid-gap: 1rem;
-	// grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 
 	& a {
 		display: grid;
@@ -120,6 +119,15 @@
 	grid-auto-flow: column;
 }
 
+.connectionLinkGrid {
+	padding-top: 10px;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: auto auto;
+	grid-auto-flow: column;
+	grid-gap: 1.5rem;
+	justify-items: center;
+}
 
 
 

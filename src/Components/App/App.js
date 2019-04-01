@@ -8,6 +8,7 @@ import Footer from '../Footer/Footer';
 import HomePage from '../LargeScopeComponents/HomePage/HomePage';
 import About from '../LargeScopeComponents/About/About';
 import Contact from '../LargeScopeComponents/Contact/Contact';
+import PortfolioProject from '../LargeScopeComponents/PortfolioProject/PortfolioProject';
 import ProjectDisplayWithRouter from '../LargeScopeComponents/ProjectDisplay/ProjectDisplay';
 import NotFoundPageComponent from '../NotFoundPageComponent/NotFoundPageComponent'; 
 
@@ -36,8 +37,9 @@ class App extends React.Component {
           <Switch>
             <Route path='/' exact component={ HomePage }/>
             <Route path='/about' component={ About }/> 
+            <Route path='/portfolioproject' component={ PortfolioProject }/>
+            <Route path ='/futureprojects' component={ ProjectDisplayWithRouter }/>
             <Route path='/contact' component={ Contact }/>
-            <Route path ='/projects' component={ ProjectDisplayWithRouter }/>
 
             {/* Catch all route for 404 errors */}
             <Route render={ ({ location }) =>  <NotFoundPageComponent/> }/>
