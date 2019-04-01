@@ -98,44 +98,42 @@ class SideMenu extends React.Component {
 							onClick={ () => {} }
 						/>
 					</Link>	
-					<Link to='/documentation/'>					
+					<Link to='/about/'>					
 						<OutlineButton
-							text='Documentation'
+							text='About'
 							shape='rounded'
 							onClick={ () => {} }
 						/>
 					</Link>	
+					<Link to='/porfolioproject/'>
+						<OutlineButton
+							text='Portfolio Project'
+							shape='rounded'
+							onClick={ () => {} }
+						/>
+					</Link>	
+					<Link to='/futureprojects/'>
+						<OutlineButton
+							text='Future Projects'
+							shape='rounded'
+							onClick={ () => {} }
+						/>
+					</Link>	
+					<Link to='/contact/'>					
+						<OutlineButton
+							text='Contact'
+							shape='rounded'
+							onClick={ () => {} }
+						/>
+					</Link>						
 				</div>
-				<div className={ styles.communityLinksTitleBar }>
-					<h3 className={ themeClass }>Community Links</h3>
-					<div className={ styles.expandCollapseButton }>
-						{
-							this.state.communityLinksExpanded ?
-							<CircleButton 
-								size='25px'
-								highlighted={ <CircleUpIconHighlighted/> }
-								darkTheme={ <CircleUpIconDarkTheme/> }
-								lightTheme={ <CircleUpIconLightTheme/> }
-								onClick={ this.handleUpIconClick }
-							/> :
-							<CircleButton 
-								size='25px'
-								highlighted={ <CircleDownIconHighlighted/> }
-								darkTheme={ <CircleDownIconDarkTheme/> }
-								lightTheme={ <CircleDownIconLightTheme/> }
-								onClick={ this.handleDownIconClick }
-							/>
-						}
-					</div>
+				<div className={ styles.connectTitleBar }>
+					<h3 className={ themeClass }>Connect</h3>
 				</div>
 				<div className={ styles.hDividerCradle }>
 					<HorizontalDivider height='3px'/>
 				</div>
-				{
-					this.state.communityLinksExpanded ?
-						<CommunityLinks communityLinks={ communityLinks }/>	:
-						null
-				}
+				{/* Peripheral link icons go here */}
 			</div>
 		);
 	}

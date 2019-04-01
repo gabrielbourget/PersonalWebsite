@@ -63,7 +63,14 @@ class Navbar extends React.Component {
 							shape='rounded'
 						/>
 					</Link>
-					<Link to='/projects'>
+					<Link to='/porfolioproject'>
+						<OutlineButton 
+							text='Porfolio Project'
+							onClick={ () => {} }
+							shape='rounded'
+						/>
+					</Link>					
+					<Link to='/futureprojects'>
 						<OutlineButton 
 							text='Future Projects'
 							onClick={ () => {} }

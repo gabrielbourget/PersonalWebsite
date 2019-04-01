@@ -31,7 +31,7 @@ class Jumbotron extends React.Component {
 					Software Developer
 				</h2>
 				<HorizontalDivider/>
-				<Link to='/portfolioProject'>
+				<Link to='/PortfolioProject'>
 					<FilledButton 
 						text='Portfolio Project'
 						onClick={ () => {} }
