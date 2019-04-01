@@ -7,7 +7,7 @@ import SideMenu from '../SideMenu/SideMenu';
 import Footer from '../Footer/Footer';
 import HomePage from '../LargeScopeComponents/HomePage/HomePage';
 import About from '../LargeScopeComponents/About/About';
-import Contact from '../LargeScopeComponents/Contact';
+import Contact from '../LargeScopeComponents/Contact/Contact';
 import ProjectDisplayWithRouter from '../LargeScopeComponents/ProjectDisplay/ProjectDisplay';
 import NotFoundPageComponent from '../NotFoundPageComponent/NotFoundPageComponent'; 
 

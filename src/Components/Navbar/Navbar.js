@@ -9,9 +9,6 @@ import { prepareComponent } from './helpers';
 
 import CircleButton from '../Buttons/CircleButton/CircleButton';
 import OutlineButton from '../Buttons/OutlineButton/OutlineButton';
-import SearchBarWithRouter from '../SearchBar/SearchBar';
-
-
 
 // - Hamburger Menu Icon
 import { ReactComponent as HamburgerMenuDarkTheme } from './SVG/HamburgerMenu/HamburgerIconDarkTheme.svg';
@@ -40,24 +37,7 @@ class Navbar extends React.Component {
 
 	handleSideMenuButtonClick = () => {
 		this.props.onSideMenuButtonClick();
-		// - This logic gets removed once redux is online.
-		// const prevState = this.state;
-		// this.setState((prevState) => (
-		// 	{ menuActive: !prevState.menuActive }
-		// ));
 	};
-
-	pushToHome = () => {
-		// - Logic to push history to home page and prompt routing change at top level. 
-	};
-
-	// pushToAbout = () => {
-	// 	// - Logic to push history to home page and prompt routing change at top level. 
-	// };
-
-	pushToDocumentation = () => {
-		// - Logic to push history to home page and prompt routing change at top level. 
-	}
 
 	render() {
 
@@ -74,13 +54,8 @@ class Navbar extends React.Component {
 						onClick={ this.handleSideMenuButtonClick }
 					/>
 				</div>
-				<SearchBarWithRouter
-					// - Active once redux is set up.
-					searchThroughArtists={ this.props.searchThroughArtists }
-					defaultText='Search by artist name. Search "Everyone" to return all artists.'
-				/>
-				<div className={ initObject.rightNavClasses }>
 
+				<div className={ initObject.rightNavClasses }>
 					<Link to ='/'>
 						<CircleButton
 							size='25px'

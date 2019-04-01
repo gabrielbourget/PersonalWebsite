@@ -13,14 +13,11 @@ const initialState = {
 	settings: {
 		theme: 'dark',
 		language: 'english',
-		defaultResultsView: 'grid',
 		backdropOpen: false,
 		sideMenuOpen: false
 	},
 	isLoading: false,
 	loadStatus: 'READY',
-	artists: [],
-	displayedArtists: []
 };
 
 const store = createStore( rootReducer, initialState, applyMiddleware(thunkMiddleware) );

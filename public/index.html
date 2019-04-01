@@ -1,5 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- Base styles that are global to the project -->
+  <style> 
+    html {
+      box-sizing: border-box; /* Include padding and border as part of element width and height */
+      font-size: 62.5% !important; /* Font sizes in REM are now base ten => 1.2 rem = 12px */
+      height: 100%;
+    }
+
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body, #root {
+      height: 100%;
+      overflow-y: auto;
+    }
+  </style>
+
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
