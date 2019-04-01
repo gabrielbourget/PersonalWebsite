@@ -56,23 +56,36 @@ class Navbar extends React.Component {
 				</div>
 
 				<div className={ initObject.rightNavClasses }>
+					<Link to='/about'>
+						<OutlineButton 
+							text='About'
+							onClick={ () => {} }
+							shape='rounded'
+						/>
+					</Link>
+					<Link to='/projects'>
+						<OutlineButton 
+							text='Future Projects'
+							onClick={ () => {} }
+							shape='rounded'
+						/>
+					</Link>		
+					<Link to='/contact'>
+						<OutlineButton 
+							text='Contact'
+							onClick={ () => {} }
+							shape='rounded'
+						/>
+					</Link>
 					<Link to ='/'>
 						<CircleButton
 							size='25px'
 							darkTheme={ <HomeIconDarkTheme/> }
 							lightTheme={ <HomeIconLightTheme/> }
 							highlighted={ <HomeIconHighlighted/> }
-							onClick={ () => this.pushToHome() } 
+							onClick={ () => {} } 
 						/>
-					</Link>
-
-					<Link to='/documentation'>
-						<OutlineButton 
-							text='Documentation'
-							onClick={ () => this.pushToDocumentation() }
-							shape='rounded'
-						/>
-					</Link>
+					</Link>					
 				</div>
 			</div>
 		);

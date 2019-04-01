@@ -1,6 +1,7 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 // import ClassNames from 'classnames';
+import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../../../ThemeContext';
 
 // import { ReactComponent as ChevronDownSkinnyDarkTheme } from './SVG/ChevronDownSkinny/ChevronDownSkinnyDarkTheme.svg';
@@ -8,26 +9,34 @@ import ChevronDownSkinnyDarkTheme from './SVG/ChevronDownSkinny/ChevronDownSkinn
 // import { ReactComponent as WaveIcon } from './SVG/WaveIcon/WaveIconLightTheme.svg';
 //import IconDisplay from '../../../Icons/IconDisplay/IconDisplay';
 import SingleIcon from '../../../Icons/SingleIcon/SingleIcon';
+import FilledButton from '../../../Buttons/FilledButton/FilledButton';
+import HorizontalDivider from '../../../Dividers/HorizontalDivider/HorizontalDivider';
 
 import styles from './Jumbotron.module.scss';
+import { prepareComponent } from './helpers';
 
 class Jumbotron extends React.Component {
 	render() {
+
+		const initObject = prepareComponent(this.props, this.context, styles);
+
 		return (
-			<div className={ styles.jumbotron }>
-				<h1>
-					Welcome to Waveguide, a directory for a <br/> 
-					growing and global community of artists <br/>
-					forming around Wave music.
-				</h1>
+			<div className={ initObject.jumbotronClasses }>
+				<Link to='/about'>
+					<h1 className={ initObject.themeClass }>
+						Gabriel Bourget
+					</h1>
+				</Link>
 				<h2>
-					Search through the directory up above to find information on <br/>
-					artists in the community. Enter the term 'everyone' in order to <br/>
-					return everyone in the directory.
+					Software Developer
 				</h2>
-				<h2>
-					Scroll down to learn more about the community.
-				</h2>
+				<HorizontalDivider/>
+				<Link to='/portfolioProject'>
+					<FilledButton 
+						text='Portfolio Project'
+						onClick={ () => {} }
+					/>
+				</Link>				
 				<div className={ styles.downChevron }>
 					<SingleIcon 
 						size='30px'
