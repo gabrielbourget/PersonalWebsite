@@ -3,11 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 import { ThemeContext } from '../../ThemeContext';
 
 import NavbarWithRouter from '../Navbar/Navbar';
-import HomePage from '../LargeScopeComponents/HomePage/HomePage';
-import ArtistProfileDisplay from '../LargeScopeComponents/ArtistProfileDisplay/ArtistProfileDisplay';
-import DocumentationDisplayWithRouter from '../LargeScopeComponents/DocumentationDisplay/DocumentationDisplay';
 import SideMenu from '../SideMenu/SideMenu';
 import Footer from '../Footer/Footer';
+import HomePage from '../LargeScopeComponents/HomePage/HomePage';
+import About from '../LargeScopeComponents/About/About';
+import Contact from '../LargeScopeComponents/Contact';
+import ProjectDisplayWithRouter from '../LargeScopeComponents/ProjectDisplay/ProjectDisplay';
 import NotFoundPageComponent from '../NotFoundPageComponent/NotFoundPageComponent'; 
 
 import styles from './App.module.css';
@@ -20,10 +21,6 @@ class App extends React.Component {
     const clientDateTime = new Date();
     const hour = clientDateTime.getHours();
     ( hour > 7 && hour < 21 ) ? this.props.switchTheme('light') : this.props.switchTheme('dark');
-
-    // - Right now this is a call to a local javascript object. Eventually, that 
-    //   dispatch function will make an asynchronous request to a remote Neo4J database. 
-    this.props.loadArtists();
   };
 
   render(){
@@ -38,26 +35,9 @@ class App extends React.Component {
           /> 
           <Switch>
             <Route path='/' exact component={ HomePage }/>
-            <Route
-              path='/artists'
-              render={ () => (
-                <ArtistProfileDisplay 
-                  displayMode='gallery'
-                  onSortClick={ this.sortArtists }
-                  onSortAlphabeticalClick={ this.props.sortArtistsAlphabetical }
-                  onSortRevAlphabeticalClick={ this.props.sortArtistsReverseAlphabetical }
-                  artists={ this.props.displayedArtists }
-                />               
-              )}
-            /> 
-            <Route 
-              path='/documentation' 
-              render={ () => (
-                <DocumentationDisplayWithRouter
-                  onThemeSwitch={ this.props.switchTheme }
-                />
-              )}
-            />
+            <Route path='/about' component={ About }/> 
+            <Route path='/contact' component={ Contact }/>
+            <Route path ='/projects' component={ ProjectDisplayWithRouter }/>
 
             {/* Catch all route for 404 errors */}
             <Route render={ ({ location }) =>  <NotFoundPageComponent/> }/>
