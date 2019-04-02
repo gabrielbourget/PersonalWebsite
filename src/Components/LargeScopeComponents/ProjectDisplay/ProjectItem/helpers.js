@@ -4,7 +4,7 @@ export const prepareComponent = ( context, props, styles ) => {
 		
 	const themeClass = (context === 'dark') ? styles.darkTheme : styles.lightTheme;
 
-	const projectItemClasses = ClassNames(styles.documentationItem, themeClass);
+	const projectItemClasses = ClassNames(styles.projectItem, themeClass);
 	const tipRightClasses = ClassNames(styles.tipRight, themeClass);
 	const tipLeftClasses = ClassNames(styles.tipLeft, themeClass);
 	const spanQuoteClasses = ClassNames(styles.spanQuote, themeClass);
@@ -12,6 +12,7 @@ export const prepareComponent = ( context, props, styles ) => {
 	const tempPlaceholderClasses = ClassNames(styles.tempPlaceHolder);
 	const componentDemonstrationRowClasses = ClassNames(styles.componentDemonstrationRow);
 	const reduxFlowDemoCradleClasses = ClassNames(styles.reduxFlowDemoCradle);
+	const imageLinkContainerClasses = ClassNames(styles.imageLinkContainer);
 
 	return {
 		projectItemClasses,
@@ -21,6 +22,7 @@ export const prepareComponent = ( context, props, styles ) => {
 		navButtonsClasses,
 		tempPlaceholderClasses,
 		componentDemonstrationRowClasses,
-		reduxFlowDemoCradleClasses
+		reduxFlowDemoCradleClasses,
+		imageLinkContainerClasses
 	};
 };

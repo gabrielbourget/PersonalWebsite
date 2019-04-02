@@ -23,14 +23,14 @@ const projectTree = {
 		isOpen: false,
 		id: '2306a4f7-8039-46d4-b4e0-9be49f7c9174'
 	},
-	'/educationalSystem': {
-		path: '/educationalSystem',
-		name: 'Fluid Learning Curriculum System',
-		type: 'file',
-		isRoot: true,
-		isOpen: false,
-		id: 'a170c130-3057-4ec9-9a1b-2ab30951b8aa'
-	},
+	// '/educationalSystem': {
+	// 	path: '/educationalSystem',
+	// 	name: 'Fluid Learning Curriculum System',
+	// 	type: 'file',
+	// 	isRoot: true,
+	// 	isOpen: false,
+	// 	id: 'a170c130-3057-4ec9-9a1b-2ab30951b8aa'
+	// },
 	'/soundStageViz': {
 		path: '/soundStageViz',
 		name: 'Sound Stage Visualization',

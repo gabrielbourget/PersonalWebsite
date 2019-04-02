@@ -13,6 +13,17 @@ import { prepareComponent } from '../../ProjectItem/helpers';
 
 class EducationalSystem extends React.Component {
 	
+	render() {
+		const initObject = prepareComponent(this.context, this.props, styles);
+
+		return (
+			<FromTheTopCradle>
+				<article>
+					
+				</article>
+			</FromTheTopCradle>			
+		);
+	}	
 }
 
 EducationalSystem.contextType = ThemeContext;

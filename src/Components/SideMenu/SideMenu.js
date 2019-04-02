@@ -127,7 +127,7 @@ class SideMenu extends React.Component {
 							onClick={ () => {} }
 						/>
 					</Link>	
-					<Link to='/porfolioproject/'>
+					<Link to='/portfolioproject/'>
 						<OutlineButton
 							text='Portfolio Project'
 							shape='rounded'

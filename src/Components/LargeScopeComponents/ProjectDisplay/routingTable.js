@@ -1,4 +1,4 @@
-import FutureProjects from './Projects/CurrentProjects/CurrentProjects';
+import FutureProjects from './Projects/FutureProjects/FutureProjects';
 import EducationalSystem from './Projects/EducationalSystem/EducationalSystem';
 import SignalTreeViz from './Projects/SignalTreeViz/SignalTreeViz';
 import SoftwareDependencyMonitoring from './Projects/SoftwareDependencyMonitoring/SoftwareDependencyMonitoring';
