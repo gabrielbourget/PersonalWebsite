@@ -16,9 +16,9 @@ import { prepareComponent } from './helpers';
 // - Icon Imports - // 
 
 // - Github
-// import { ReactComponent as GithubIconDarkTheme } from '../../../../Icons/SocialMediaIcons/Github/GithubIconDarkTheme.svg';
-// import { ReactComponent as GithubIconLightTheme } from '../../../../Icons/SocialMediaIcons/Github/GithubIconLightTheme.svg';
-// import { ReactComponent as GithubIconHighlighted } from '../../../../Icons/SocialMediaIcons/Github/GithubIconHighlighted.svg';
+import { ReactComponent as GithubIconDarkTheme } from '../../../../Icons/SocialMediaIcons/Github/GithubIconDarkTheme.svg';
+import { ReactComponent as GithubIconLightTheme } from '../../../../Icons/SocialMediaIcons/Github/GithubIconLightTheme.svg';
+import { ReactComponent as GithubIconHighlighted } from '../../../../Icons/SocialMediaIcons/Github/GithubIconHighlighted.svg';
 
 // - Facebook
 import { ReactComponent as FacebookIconDarkTheme } from '../../../../Icons/SocialMediaIcons/Facebook/FacebookIconDarkTheme.svg';
@@ -58,20 +58,19 @@ class Jumbotron extends React.Component {
 					/>
 				</Link>				
 				<div className={ initObject.connectionLinkGridClasses }>
-{/*					<a 
+					<a 
 						href='https://github.com/gabrielbourget' 
 						target='_blank'
 						rel='noopener noreferrer' 
 					>											
 						<CircleButton
-							key={ index }
 							size='50px'
 							darkTheme={ <GithubIconDarkTheme/> }
 							highlighted={ <GithubIconHighlighted/> }
 							lightTheme={ <GithubIconLightTheme/> }
 							onClick={ () => {} }
 						/>
-					</a>*/}		
+					</a>
 					<a 
 						href='https://www.facebook.com/gabriel.bourget' 
 						target='_blank'

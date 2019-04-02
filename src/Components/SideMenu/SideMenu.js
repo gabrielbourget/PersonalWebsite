@@ -28,9 +28,9 @@ import { ReactComponent as XIconLightTheme } from './SVG/XIcon/XIconLightTheme.s
 import { ReactComponent as XIconHighlighted } from './SVG/XIcon/XIconHighlighted.svg';
 
 // - Github
-// import { ReactComponent as GithubIconDarkTheme } from '../../Icons/SocialMediaIcons/Github/GithubIconDarkTheme.svg';
-// import { ReactComponent as GithubIconLightTheme } from '../../Icons/SocialMediaIcons/Github/GithubIconLightTheme.svg';
-// import { ReactComponent as GithubIconHighlighted } from '../../Icons/SocialMediaIcons/Github/GithubIconHighlighted.svg';
+import { ReactComponent as GithubIconDarkTheme } from '../../Icons/SocialMediaIcons/Github/GithubIconDarkTheme.svg';
+import { ReactComponent as GithubIconLightTheme } from '../../Icons/SocialMediaIcons/Github/GithubIconLightTheme.svg';
+import { ReactComponent as GithubIconHighlighted } from '../../Icons/SocialMediaIcons/Github/GithubIconHighlighted.svg';
 
 // - Facebook
 import { ReactComponent as FacebookIconDarkTheme } from '../../Icons/SocialMediaIcons/Facebook/FacebookIconDarkTheme.svg';
@@ -156,20 +156,19 @@ class SideMenu extends React.Component {
 					<HorizontalDivider height='3px'/>
 				</div>
 				<div className={ styles.connectionLinkGrid }>
-{/*					<a 
+					<a 
 						href='https://github.com/gabrielbourget' 
 						target='_blank'
 						rel='noopener noreferrer' 
 					>											
 						<CircleButton
-							key={ index }
 							size='50px'
 							darkTheme={ <GithubIconDarkTheme/> }
 							lightTheme={ <GithubIconLightTheme/> }
 							highlighted={ <GithubIconHighlighted/> }
 							onClick={ () => {} }
 						/>
-					</a>*/}	
+					</a>
 					<a 
 						href='https://www.facebook.com/gabriel.bourget' 
 						target='_blank'
