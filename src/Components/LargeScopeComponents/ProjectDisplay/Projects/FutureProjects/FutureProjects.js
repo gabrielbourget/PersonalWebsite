@@ -11,10 +11,10 @@ import HorizontalDivider from '../../../../Dividers/HorizontalDivider/Horizontal
 import styles from '../../ProjectItem/ProjectItem.module.scss';
 import { prepareComponent } from '../../ProjectItem/helpers';
 
-class CurrentProjects extends React.Component {
+class FutureProjects extends React.Component {
 	
 }
 
-CurrentProjects.contextType = ThemeContext;
+FutureProjects.contextType = ThemeContext;
 
-export default CurrentProjects;
+export default FutureProjects;

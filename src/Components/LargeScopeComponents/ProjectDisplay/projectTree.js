@@ -1,7 +1,7 @@
 const projectTree = {
-	'/currentProjects': {
-		path: '/currentProjects',
-		name: 'Current Projects',
+	'/futureProjects': {
+		path: '/futureProjects',
+		name: 'Future Projects',
 		type: 'file',
 		isRoot: true,
 		isOpen: false,

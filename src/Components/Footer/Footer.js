@@ -6,14 +6,35 @@ import { ThemeContext } from '../../ThemeContext';
 import IconDisplay from '../Icons/IconDisplay/IconDisplay';
 import Paragraph from '../TextLayout/Paragraph/Paragraph';
 import OutlineButton from '../Buttons/OutlineButton/OutlineButton';
+import CircleButton from '../Buttons/CircleButton/CircleButton';
 
 import styles from './Footer.module.scss';
 // import WaveIconDarkTheme from './SVG/WaveIcon/WaveIconDarkTheme';
 import { ReactComponent as WaveIconDarkTheme } from './SVG/WaveIcon/WaveIconDarkTheme.svg';
 import { ReactComponent as  WaveIconLightTheme } from './SVG/WaveIcon/WaveIconLightTheme.svg';
 
-// import waveImageDarkTheme from './SVG/WaveIcon/WaveIconImageDarkTheme.png';
-// import waveImageLightTheme from './SVG/WaveIcon/WaveIconImageLightTheme.png';
+// - Icon Imports - // 
+
+// - Github
+import { ReactComponent as GithubIconDarkTheme } from '../../Icons/SocialMediaIcons/Github/GithubIconDarkTheme.svg';
+import { ReactComponent as GithubIconLightTheme } from '../../Icons/SocialMediaIcons/Github/GithubIconLightTheme.svg';
+import { ReactComponent as GithubIconHighlighted } from '../../Icons/SocialMediaIcons/Github/GithubIconHighlighted.svg';
+
+// - Facebook
+import { ReactComponent as FacebookIconDarkTheme } from '../../Icons/SocialMediaIcons/Facebook/FacebookIconDarkTheme.svg';
+import { ReactComponent as FacebookIconLightTheme } from '../../Icons/SocialMediaIcons/Facebook/FacebookIconLightTheme.svg';
+import { ReactComponent as FacebookIconHighlighted } from '../../Icons/SocialMediaIcons/Facebook/FacebookIconHighlighted.svg';
+
+// - Instagram
+import { ReactComponent as InstagramIconDarkTheme } from '../../Icons/SocialMediaIcons/Instagram/InstagramIconDarkTheme.svg';
+import { ReactComponent as InstagramIconLightTheme } from '../../Icons/SocialMediaIcons/Instagram/InstagramIconLightTheme.svg';
+import { ReactComponent as InstagramIconHighlighted } from '../../Icons/SocialMediaIcons/Instagram/InstagramIconHighlighted.svg';
+
+// - Twitter
+import { ReactComponent as TwitterIconDarkTheme } from '../../Icons/SocialMediaIcons/Twitter/TwitterIconDarkTheme.svg';
+import { ReactComponent as TwitterIconLightTheme } from '../../Icons/SocialMediaIcons/Twitter/TwitterIconLightTheme.svg';
+import { ReactComponent as TwitterIconHighlighted } from '../../Icons/SocialMediaIcons/Twitter/TwitterIconHighlighted.svg';
+
 
 class Footer extends React.Component {
 	render() {
@@ -23,53 +44,62 @@ class Footer extends React.Component {
 
 		return (
 			<div className={ footerClasses }>
-				<div className={ styles.logoAndDescription }>
-					<div className={ styles.logo }>
-						<IconDisplay
-							size='75px'
-							darkTheme={ <WaveIconDarkTheme/> }
-							lightTheme={ <WaveIconLightTheme/> }
-						/>
-
-
-					</div>
-					<div className={ styles.description }>
-						<Paragraph fontSize='1.5rem'>
-							Waveguide is developed and maintained by Gabriel Bourget. 
-							While this application serves primarily as a web development
-							portfolio project at the moment, I'm hoping to add increasing
-							functionality to it as time goes on.
-						</Paragraph>
-					</div>					
-				</div>
-
-				<div className={ styles.links }>
-					<a
-						href='https://www.github.com/gabrielbourget/WaveMusicCommunity'
+				<h2>&#169; Gabriel Bourget, 02019</h2>
+				<div className={ styles.connectionLinkGrid }>
+					<a 
+						href='https://github.com/gabrielbourget' 
 						target='_blank'
-						rel='noopener noreferrer'
-					>
-						<OutlineButton
-							text='Github Repository'
-							shape='rounded'
+						rel='noopener noreferrer' 
+					>											
+						<CircleButton
+							size='50px'
+							darkTheme={ <GithubIconDarkTheme/> }
+							highlighted={ <GithubIconHighlighted/> }
+							lightTheme={ <GithubIconLightTheme/> }
 							onClick={ () => {} }
 						/>
 					</a>
-					<Link to='/'>
-						<OutlineButton
-							text='Home'
-							shape='rounded'
+					<a 
+						href='https://www.facebook.com/gabriel.bourget' 
+						target='_blank'
+						rel='noopener noreferrer' 
+					>											
+						<CircleButton
+							size='50px'
+							darkTheme={ <FacebookIconDarkTheme/> }
+							highlighted={ <FacebookIconHighlighted/> }
+							lightTheme={ <FacebookIconLightTheme/> }
 							onClick={ () => {} }
-						/>							
-					</Link>
-					<Link to='/documentation'>
-						<OutlineButton
-							text='Documentation'
-							shape='rounded'
+						/>
+					</a>
+					<a 
+						href='https://www.instagram.com/geebriel_/' 
+						target='_blank'
+						rel='noopener noreferrer' 
+					>											
+						<CircleButton
+							size='50px'
+							darkTheme={ <InstagramIconDarkTheme/> }
+							highlighted={ <InstagramIconHighlighted/> }
+							lightTheme={ <InstagramIconLightTheme/> }
 							onClick={ () => {} }
-						/>							
-					</Link>
+						/>
+					</a>
+					<a 
+						href='https://twitter.com/gabrielbourget'
+						target='_blank'
+						rel='noopener noreferrer' 
+					>											
+						<CircleButton
+							size='50px'
+							darkTheme={ <TwitterIconDarkTheme/> }
+							highlighted={ <TwitterIconHighlighted/> }
+							lightTheme={ <TwitterIconLightTheme/> }
+							onClick={ () => {} }
+						/>
+					</a>					
 				</div>
+				<h3>Contact &rarr; hellogabrielbourget@gmail.com</h3>
 			</div>
 		);
 	}
@@ -78,9 +108,3 @@ class Footer extends React.Component {
 Footer.contextType = ThemeContext;
 
 export default Footer;
-
-					 // {
-					 // 	(this.context === 'dark') ?
-					 // 	<img src={ waveImageDarkTheme } alt="Wave Icon Dark Theme"/> :
-					 // 	<img src={ waveImageLightTheme } alt="WaveIconLightTheme"/>
-					 // }

@@ -140,13 +140,6 @@ class SideMenu extends React.Component {
 							shape='rounded'
 							onClick={ () => {} }
 						/>
-					</Link>	
-					<Link to='/contact/'>					
-						<OutlineButton
-							text='Contact'
-							shape='rounded'
-							onClick={ () => {} }
-						/>
 					</Link>						
 				</div>
 				<div className={ styles.connectTitleBar }>

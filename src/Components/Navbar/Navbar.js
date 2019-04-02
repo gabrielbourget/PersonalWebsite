@@ -63,7 +63,7 @@ class Navbar extends React.Component {
 							shape='rounded'
 						/>
 					</Link>
-					<Link to='/porfolioproject'>
+					<Link to='/portfolioproject'>
 						<OutlineButton 
 							text='Porfolio Project'
 							onClick={ () => {} }
@@ -77,13 +77,6 @@ class Navbar extends React.Component {
 							shape='rounded'
 						/>
 					</Link>		
-					<Link to='/contact'>
-						<OutlineButton 
-							text='Contact'
-							onClick={ () => {} }
-							shape='rounded'
-						/>
-					</Link>
 					<Link to ='/'>
 						<CircleButton
 							size='25px'
