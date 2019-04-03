@@ -22,10 +22,8 @@ import HomeIconHighlighted from './SVG/HomeIcon/HomeIconHighlighted';
 
 class Navbar extends React.Component {
 
-	// - Once this depends on redux state, the menu and x icon button will sync up
-	// 	 to clicking the backdrop to close the menu. 
 	state = {
-		menuActive: false
+
 	};
 
 	static propTypes = {
@@ -39,23 +37,12 @@ class Navbar extends React.Component {
 		this.props.onSideMenuButtonClick();
 	};
 
-	render() {
+	handleResize = () => this.setState( {windowWidth: window.innerWidth });
 
-		const initObject = prepareComponent(this.context, this.props, styles, this.state);
-
-		return (
-			<div className={ initObject.navbarClasses }>
-				<div className={ initObject.sideMenuButtonClasses }>
-					<CircleButton 
-						size='20px'
-						darkTheme={ <HamburgerMenuDarkTheme/> }
-						lightTheme={ <HamburgerMenuLightTheme/> }
-						highlighted={ <HamburgerMenuHighlighted/> }
-						onClick={ this.handleSideMenuButtonClick }
-					/>
-				</div>
-
-				<div className={ initObject.rightNavClasses }>
+	conditionalButtonRendering = () => {
+		if (this.state.windowWidth >= 650) {
+			return (
+				<React.Fragment>
 					<Link to='/about'>
 						<OutlineButton 
 							text='About'
@@ -76,7 +63,38 @@ class Navbar extends React.Component {
 							onClick={ () => {} }
 							shape='rounded'
 						/>
-					</Link>		
+					</Link>					
+				</React.Fragment>
+			);
+		}
+		else return null;
+	};
+
+	componentDidMount = () => {
+		this.setState( { windowWidth: window.innerWidth } );
+		window.addEventListener('resize', this.handleResize);
+	};
+
+	componentWillUnmount = () => window.removeEventListener('resize', this.handleResize);
+
+	render() {
+
+		const initObject = prepareComponent(this.context, this.props, styles, this.state);
+
+		return (
+			<div className={ initObject.navbarClasses }>
+				<div className={ initObject.sideMenuButtonClasses }>
+					<CircleButton 
+						size='20px'
+						darkTheme={ <HamburgerMenuDarkTheme/> }
+						lightTheme={ <HamburgerMenuLightTheme/> }
+						highlighted={ <HamburgerMenuHighlighted/> }
+						onClick={ this.handleSideMenuButtonClick }
+					/>
+				</div>
+
+				<div className={ initObject.rightNavClasses }>
+					{ this.conditionalButtonRendering() }
 					<Link to ='/'>
 						<CircleButton
 							size='25px'
