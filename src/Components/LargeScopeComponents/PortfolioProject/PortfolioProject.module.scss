@@ -225,11 +225,20 @@ li {
 	flex-direction: row;
 	justify-content: center;
 
+	@media (max-width: 850px) {
+		height: 150px;
+	}
+
 	& .imageLink {
 
 		background: var(--black);
 		max-width: 550px;
 		width: 100%;
+
+		@media (max-width: 850px) {
+			width: 300px;
+			max-width: 300px;
+		}
 
 		& a {
 			width: 100%;
@@ -241,6 +250,10 @@ li {
 			background-image: url('./Assets/Waveguide.png');
 			background-size: cover;
 			border: 3px solid var(--covenantPurple);
+
+			@media (max-width: 850px) {
+				height: 150px;
+			}
 		}
 
 		&.darkTheme {
