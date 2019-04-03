@@ -40,7 +40,7 @@ class Navbar extends React.Component {
 	handleResize = () => this.setState( {windowWidth: window.innerWidth });
 
 	conditionalButtonRendering = () => {
-		if (this.state.windowWidth >= 650) {
+		if (this.state.windowWidth >= 600) {
 			return (
 				<React.Fragment>
 					<Link to='/about'>
