@@ -24,7 +24,7 @@ class About extends React.Component {
 					<p>
 						<TextIndent>Coming</TextIndent> out of a long educational journey over the past ten years, I have had the opportunity to explore 
 						topics that are of interest to me, and have come out the other end with an undergraduate degree in Physics and Math from Carleton 
-						University and an advanced diploma in Computer Science from Algonquin college. The kinds of problems that we are trying to tackle in 
+						University and an advanced diploma in Computer Science from Algonquin College. The kinds of problems that we are trying to tackle in 
 						this century, from climate change to global inequality, are complex and interconnected. As such, the approach I have tried to take with my 
 						educational path is to dive deep into many subjects, developing the kind of rich connections between subjects needed to think outside the box and start 
 						to contribute to solutions to these problems. 
