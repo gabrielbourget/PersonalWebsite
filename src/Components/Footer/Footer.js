@@ -35,6 +35,11 @@ import { ReactComponent as TwitterIconDarkTheme } from '../../Icons/SocialMediaI
 import { ReactComponent as TwitterIconLightTheme } from '../../Icons/SocialMediaIcons/Twitter/TwitterIconLightTheme.svg';
 import { ReactComponent as TwitterIconHighlighted } from '../../Icons/SocialMediaIcons/Twitter/TwitterIconHighlighted.svg';
 
+// - LinkedIn
+import { ReactComponent as LinkedInIconDarkTheme } from '../../Icons/SocialMediaIcons/LinkedIn/LinkedInIconDarkTheme.svg';
+import { ReactComponent as LinkedInIconLightTheme } from '../../Icons/SocialMediaIcons/LinkedIn/LinkedInIconLightTheme.svg';
+import { ReactComponent as LinkedInIconHighlighted } from '../../Icons/SocialMediaIcons/LinkedIn/LinkedInIconHighlighted.svg';
+
 
 class Footer extends React.Component {
 	render() {
@@ -97,7 +102,20 @@ class Footer extends React.Component {
 							lightTheme={ <TwitterIconLightTheme/> }
 							onClick={ () => {} }
 						/>
-					</a>					
+					</a>	
+					<a 
+						href='https://www.linkedin.com/in/gabrielbourget'
+						target='_blank'
+						rel='noopener noreferrer' 
+					>											
+						<CircleButton
+							size='50px'
+							darkTheme={ <LinkedInIconDarkTheme/> }
+							highlighted={ <LinkedInIconHighlighted/> }
+							lightTheme={ <LinkedInIconLightTheme/> }
+							onClick={ () => {} }
+						/>
+					</a>	
 				</div>
 				<h3>Contact &rarr; gabrielbourget@gmail.com</h3>
 			</div>

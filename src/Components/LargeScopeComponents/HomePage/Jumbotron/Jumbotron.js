@@ -35,6 +35,11 @@ import { ReactComponent as TwitterIconDarkTheme } from '../../../../Icons/Social
 import { ReactComponent as TwitterIconLightTheme } from '../../../../Icons/SocialMediaIcons/Twitter/TwitterIconLightTheme.svg';
 import { ReactComponent as TwitterIconHighlighted } from '../../../../Icons/SocialMediaIcons/Twitter/TwitterIconHighlighted.svg';
 
+// - LinkedIn
+import { ReactComponent as LinkedInIconDarkTheme } from '../../../../Icons/SocialMediaIcons/LinkedIn/LinkedInIconDarkTheme.svg';
+import { ReactComponent as LinkedInIconLightTheme } from '../../../../Icons/SocialMediaIcons/LinkedIn/LinkedInIconLightTheme.svg';
+import { ReactComponent as LinkedInIconHighlighted } from '../../../../Icons/SocialMediaIcons/LinkedIn/LinkedInIconHighlighted.svg';
+
 class Jumbotron extends React.Component {
 	render() {
 
@@ -109,7 +114,20 @@ class Jumbotron extends React.Component {
 							lightTheme={ <TwitterIconLightTheme/> }
 							onClick={ () => {} }
 						/>
-					</a>		
+					</a>
+					<a 
+						href='https://www.linkedin.com/in/gabrielbourget'
+						target='_blank'
+						rel='noopener noreferrer' 
+					>											
+						<CircleButton
+							size='50px'
+							darkTheme={ <LinkedInIconDarkTheme/> }
+							highlighted={ <LinkedInIconHighlighted/> }
+							lightTheme={ <LinkedInIconLightTheme/> }
+							onClick={ () => {} }
+						/>
+					</a>
 				</div>
 			</div>
 		);
