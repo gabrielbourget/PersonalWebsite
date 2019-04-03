@@ -123,9 +123,10 @@
 	padding-top: 10px;
 	display: grid;
 	justify-content: center;
-	grid-template-columns: 75px 75px;
+	grid-template-columns: repeat(auto-fit, 75px);
 	grid-gap: 1.5rem;
 	justify-items: center;
+	justify-content: center;
 }
 
 
