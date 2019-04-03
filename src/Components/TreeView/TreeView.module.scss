@@ -8,6 +8,14 @@
 	width: 100%;
 	height: 100%;
 
+	&.smallScreen {
+		position: fixed;
+		height: 95%;
+		width: 95%;
+		top: 15px;
+		left: 15px;
+	}
+
 	overflow-y: scroll;
 
 	&.darkTheme { background: var(--veryveryDarkGrey); }
