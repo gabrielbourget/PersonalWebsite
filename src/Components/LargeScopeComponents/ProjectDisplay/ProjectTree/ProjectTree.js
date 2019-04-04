@@ -15,7 +15,10 @@ class ProjectTree extends React.Component {
 
 		return (
 			<div className={ projectTreeClasses }>
-				<TreeView data = { projectTree }/>
+				<TreeView 
+					data = { projectTree }
+					nodeClick={ this.props.nodeClick }
+				/>
 			</div>
 		);
 	}

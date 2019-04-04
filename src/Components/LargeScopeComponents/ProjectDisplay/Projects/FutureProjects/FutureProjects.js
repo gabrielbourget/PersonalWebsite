@@ -51,7 +51,7 @@ class FutureProjects extends React.Component {
 								</Link>
 							</li>
 							<li>
-								<Link>
+								<Link to='/futureprojects/5f4e0d6d-2a2c-4241-8dfc-2ec78bcde61c'>
 									A visualization of the signal tree through which audio flows in a digital audio workstation. This would seek to help musicians and engineers visualize 
 									their work as it grows, and to more effectively troubleshoot problem areas, such as signal that is too hot. 
 								</Link>

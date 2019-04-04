@@ -23,7 +23,7 @@ import HomeIconHighlighted from './SVG/HomeIcon/HomeIconHighlighted';
 class Navbar extends React.Component {
 
 	state = {
-
+		windowWidth: window.innerWidth
 	};
 
 	static propTypes = {

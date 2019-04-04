@@ -13,13 +13,13 @@ import CircleButton from '../Buttons/CircleButton/CircleButton';
 // - Icon Imports - // 
 
 // - Circle Down Icon
-import CircleDownIconDarkTheme from './SVG/CircleDownIcon/CircleDownIcon_DarkTheme';
-import CircleDownIconLightTheme from './SVG/CircleDownIcon/CircleDownIcon_LightTheme';
-import CircleDownIconHighlighted from './SVG/CircleDownIcon/CircleDownIcon_Highlighted';
+// import CircleDownIconDarkTheme from './SVG/CircleDownIcon/CircleDownIcon_DarkTheme';
+// import CircleDownIconLightTheme from './SVG/CircleDownIcon/CircleDownIcon_LightTheme';
+// import CircleDownIconHighlighted from './SVG/CircleDownIcon/CircleDownIcon_Highlighted';
 // - Circle Up Icon
-import CircleUpIconDarkTheme from './SVG/CircleUpIcon/CircleUpIcon_DarkTheme';
-import CircleUpIconLightTheme from './SVG/CircleUpIcon/CircleUpIcon_LightTheme';
-import CircleUpIconHighlighted from './SVG/CircleUpIcon/CircleUpIcon_Highlighted';
+// import CircleUpIconDarkTheme from './SVG/CircleUpIcon/CircleUpIcon_DarkTheme';
+// import CircleUpIconLightTheme from './SVG/CircleUpIcon/CircleUpIcon_LightTheme';
+// import CircleUpIconHighlighted from './SVG/CircleUpIcon/CircleUpIcon_Highlighted';
 // - X Icon
 import { ReactComponent as XIconDarkTheme } from './SVG/XIcon/XIconDarkTheme.svg';
 import { ReactComponent as XIconLightTheme } from './SVG/XIcon/XIconLightTheme.svg';

@@ -3,26 +3,27 @@ import ClassNames from 'classnames';
 import PropTypes from 'prop-types';
 import { ThemeContext } from '../../ThemeContext';
 
-import styles from './TreeView.module.scss';
-
 import ContentTree from './ContentTree/ContentTree';
+
+import styles from './TreeView.module.scss';
+import { prepareComponent } from './helpers';
 
 class TreeView extends React.Component {
 
   static propTypes = {
     data: PropTypes.object.isRequired
-  }
+  };
 
 	render() {
 
-		const themeClass = (this.context === 'dark') ? styles.darkTheme : styles.lightTheme;
-		const treeViewClasses = ClassNames(styles.treeView, themeClass);
+		const initObject = prepareComponent(this.context, this.props, this.state, styles);
 
 		return ( 
-			<div className={ treeViewClasses }>
+			<div className={ initObject.treeViewClasses }>
 				<ContentTree 
 					data={ this.props.data }
 					onSelect={ () => {} }
+					nodeClick={ this.props.nodeClick }
 				/>
 			</div>
 		);

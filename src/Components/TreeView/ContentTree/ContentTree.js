@@ -37,7 +37,12 @@ class ContentTree extends React.Component {
   onNodeSelect = (node) => {
     const { onSelect } = this.props;
     onSelect(node);
-  }	
+  }	;
+
+  handleNodeClick = () => {
+  	console.log('boop');
+  	this.props.nodeClick();
+  };
 
 	render() {
 		const rootNodes = this.getRootNodes();
@@ -51,7 +56,8 @@ class ContentTree extends React.Component {
 							node={ node }
 							getChildNodes={ this.getChildNodes }
 							onToggle={ this.onToggle }
-							onNodeSelect ={ this.onNodeSelect }
+							onNodeSelect={ this.onNodeSelect }
+							onClick={ this.handleNodeClick }
 						/>
 					))
 				}

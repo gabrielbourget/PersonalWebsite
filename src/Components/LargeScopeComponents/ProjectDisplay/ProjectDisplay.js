@@ -6,6 +6,7 @@ import { ThemeContext } from '../../../ThemeContext';
 
 import FromTheTopCradle from '../../Cradles/FromTheTopCradle/FromTheTopCradle';
 import ProjectTree from './ProjectTree/ProjectTree';
+import TreeToggleButton from './TreeToggleButton/TreeToggleButton';
 
 import styles from './ProjectDisplay.module.scss';
 import routingTable from './routingTable';
@@ -19,6 +20,49 @@ import SoundStageViz from './Projects/SoundStageViz/SoundStageViz';
 import TabCordion from './Projects/TabCordion/TabCordion';
 
 class ProjectDisplay extends React.Component {
+
+	state = {
+		treeOpened: false,
+		windowWidth: window.innerWidth
+	};
+
+	handleResize = () => this.setState( {windowWidth: window.innerWidth });
+
+	toggleTree = () => {
+		const prevState = this.state;
+		this.setState( (prevState) => (
+			{ treeOpened: !prevState.treeOpened }
+		));
+	}
+
+	conditionalTreeRender = () => {
+		if (this.state.windowWidth > 650) return <ProjectTree/>;
+		if (this.state.windowWidth <= 650 && this.state.treeOpened) {
+			return (
+				<React.Fragment>
+					<ProjectTree nodeClick={ this.toggleTree }/>	
+					<TreeToggleButton 
+						onClick={ this.toggleTree }
+						status='open'
+					/>
+				</React.Fragment>
+			);
+		}
+		else return (
+			<TreeToggleButton 
+				onClick={ this.toggleTree }
+				status='closed'
+			/>
+		);
+	};
+
+  componentDidMount = () => {
+		this.setState( { windowWidth: window.innerWidth } );
+		window.addEventListener('resize', this.handleResize);
+	};
+
+	componentWillUnmount = () => window.removeEventListener('resize', this.handleResize);  
+
 	render() {
 
 		const themeClass = (this.context === 'dark') ? styles.darkTheme : styles.lightTheme;
@@ -27,7 +71,8 @@ class ProjectDisplay extends React.Component {
 		return (
 			<FromTheTopCradle>
 				<div className={ projectDisplayClasses }>
-					<ProjectTree/>
+					
+					{ this.conditionalTreeRender() }
 
 					<Route path='/futureprojects' exact component={ FutureProjects }/>
 					<Route 

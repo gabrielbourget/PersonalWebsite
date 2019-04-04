@@ -17,9 +17,8 @@ const mapDispatchToProps = (dispatch) => (
 			dispatch( actionCreators.switchTheme(theme) )
 		),
 		toggleSideMenu: () => {
-			console.log('in toggleSideMenu()');
 			dispatch( actionCreators.toggleSideMenu() );
-			dispatch( actionCreators.toggleBackdrop() );
+			// dispatch( actionCreators.toggleBackdrop() );
 		},
 		// toggleBackdrop: () => (
 		// 	dispatch( actionCreators.toggleBackDrop() )
