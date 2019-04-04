@@ -120,28 +120,28 @@ class SideMenu extends React.Component {
 						<OutlineButton
 							text='Home'
 							shape='rounded'
-							onClick={ () => {} }
+							onClick={ this.handleSideMenuButtonClick }
 						/>
 					</Link>	
 					<Link to='/about/'>					
 						<OutlineButton
 							text='About'
 							shape='rounded'
-							onClick={ () => {} }
+							onClick={ this.handleSideMenuButtonClick  }
 						/>
 					</Link>	
 					<Link to='/portfolioproject/'>
 						<OutlineButton
 							text='Portfolio Project'
 							shape='rounded'
-							onClick={ () => {} }
+							onClick={ this.handleSideMenuButtonClick }
 						/>
 					</Link>	
 					<Link to='/futureprojects/'>
 						<OutlineButton
 							text='Future Projects'
 							shape='rounded'
-							onClick={ () => {} }
+							onClick={ this.handleSideMenuButtonClick }
 						/>
 					</Link>						
 				</div>
